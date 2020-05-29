@@ -16,7 +16,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Text="Nombre Apellido" 
+        <Label Text="Nombre Apellido"
+               TextColor="{StaticResource colorPrincipal}"
                x:Name="lblNombre" 
                Grid.Column="1"/>
 

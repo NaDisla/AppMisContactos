@@ -5,16 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppMisContactos.NuevoContactoPage">
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20">
             <Entry x:Name="txtNombre"
-                   Placeholder="Nombre"/>
+                   Text="Juan"
+                   Placeholder="Nombre"
+                   Style="{StaticResource estiloAdicional}"/>
             <Entry x:Name="txtApellido"
+                   Text="de los Palotes"
                    Placeholder="Primer Apellido"/>
             <Entry x:Name="txtCorreo"
+                   Text="juanpalotes@gmail.com"
                    Placeholder="Correo"
                    Keyboard="Email"/>
             <Entry x:Name="txtTelefono"
+                   Text="809-123-4567"
                    Placeholder="Teléfono"
                    Keyboard="Telephone"/>
         </StackLayout>
