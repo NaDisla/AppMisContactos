@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
 
 namespace AppMisContactos.Droid
 {
@@ -21,7 +22,11 @@ namespace AppMisContactos.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            string nombreArchivo = "bd_Contactos.sqlite";
+            string rutaCarpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);
+            LoadApplication(new App(rutaCompleta));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
