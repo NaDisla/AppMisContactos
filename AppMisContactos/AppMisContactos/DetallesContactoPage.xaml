@@ -5,11 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppMisContactos.DetallesContactoPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    
+    <Grid Margin="10,20,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Nombre Apellido" 
+               x:Name="lblNombre" 
+               Grid.Column="1"/>
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="lblCorreo" 
+                   Text="correo@ejemplo.com"/>
+            <Label x:Name="lblTelefono"
+                   Text="809-123-4567"/>
+
+
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
