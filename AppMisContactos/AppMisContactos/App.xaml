@@ -19,6 +19,11 @@
                 <Setter Property="FontFamily" Value="Arial" />
                 <Setter Property="FontAttributes" Value="None" />
             </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="CadetBlue"/>
+                <Setter Property="WidthRequest" Value="90"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

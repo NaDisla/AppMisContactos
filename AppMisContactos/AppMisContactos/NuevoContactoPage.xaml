@@ -23,6 +23,10 @@
                    Text="809-123-4567"
                    Placeholder="Teléfono"
                    Keyboard="Telephone"/>
+            <Button x:Name="btnGuardarContacto"
+                    Text="Guardar"
+                    Clicked="btnGuardarContacto_Clicked"
+                    TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
