@@ -12,7 +12,7 @@
                    HorizontalTextAlignment="Center"
                    FontSize="20"
                    FontAttributes="Bold"
-                   TextColor="Black"/>
+                   TextColor="{StaticResource colorLabel}"/>
             <Entry x:Name="txtNombre"
                    Placeholder="Nombre"/>
             <Entry x:Name="txtApellido"

@@ -20,7 +20,15 @@ namespace AppMisContactos
         {
             InitializeComponent();
             contactosLista = new List<Contactos>();
+            listContactos.ItemSelected += ListContactos_ItemSelected;
         }
+
+        private void ListContactos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var contactoSeleccionado = e.SelectedItem as Contactos;
+            Navigation.PushAsync(new DetallesContactoPage(contactoSeleccionado));
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -31,6 +39,7 @@ namespace AppMisContactos
 
                 listContactos.ItemsSource = contactosLista;
             }
+            
         }
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {

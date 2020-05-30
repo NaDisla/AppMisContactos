@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="colorPrincipal">DarkBlue</Color>
+            <Color x:Key="colorLabel">Black</Color>
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
                 <Setter Property="FontAttributes" Value="Bold" />
