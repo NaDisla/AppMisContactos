@@ -18,21 +18,35 @@ namespace AppMisContactos
         {
             InitializeComponent();
         }
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            lblHora.Text = DateTime.Now.ToShortTimeString();
+        }
         private void btnGuardarContacto_Clicked(object sender, EventArgs e)
         {
-            Contactos nuevoContacto = new Contactos()
+            try
             {
-                Nombre = txtNombre.Text,
-                Apellido = txtApellido.Text,
-                Correo = txtCorreo.Text,
-                Telefono = txtTelefono.Text
-            };
-
-            using (var connection = new SQLiteConnection(App.dbRuta))
+                Contactos nuevoContacto = new Contactos()
+                {
+                    Nombre = txtNombre.Text,
+                    Apellido = txtApellido.Text,
+                    Correo = txtCorreo.Text,
+                    Telefono = txtTelefono.Text
+                };
+                using (var connection = new SQLiteConnection(App.dbRuta))
+                {
+                    connection.CreateTable<Contactos>();
+                    connection.Insert(nuevoContacto);
+                    if(connection.Table<Contactos>().Table != null)
+                    {
+                        DisplayAlert("Contacto guardado", "Se ha guardado el contacto con éxito.","OK");
+                    }
+                }
+            }
+            catch (Exception)
             {
-                connection.CreateTable<Contactos>();
-                connection.Insert(nuevoContacto);
+                DisplayAlert("Error agregando el contacto", "Se produjo un error al guardar el contacto.", "OK");
             }
         }
     }

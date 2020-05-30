@@ -12,12 +12,7 @@
                 <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontFamily" Value="Arial" />
-            </Style>
-
-            <Style TargetType="Entry" x:Key="estiloAdicional">
-                <Setter Property="TextColor" Value="Green"/>
-                <Setter Property="FontFamily" Value="Arial" />
-                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="PlaceholderColor" Value="CadetBlue" />
             </Style>
 
             <Style TargetType="Button">

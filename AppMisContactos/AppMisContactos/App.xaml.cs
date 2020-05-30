@@ -10,14 +10,14 @@ namespace AppMisContactos
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
         public static string dbRuta;
         public App(string rutaDB)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
             dbRuta = rutaDB;
         }
 
