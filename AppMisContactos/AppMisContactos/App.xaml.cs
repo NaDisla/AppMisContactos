@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,6 +7,7 @@ namespace AppMisContactos
 {
     public partial class App : Application
     {
+        public static MobileServiceClient cliente = new MobileServiceClient("https://udemy-contactos.azurewebsites.net");
         public App()
         {
             InitializeComponent();
