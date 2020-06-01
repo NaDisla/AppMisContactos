@@ -25,22 +25,24 @@ namespace AppMisContactos
         }
         private void btnGuardarContacto_Clicked(object sender, EventArgs e)
         {
-            try
-            {
                 Contactos nuevoContacto = new Contactos()
                 {
-                    Nombre = txtNombre.Text,
-                    Apellido = txtApellido.Text,
-                    Correo = txtCorreo.Text,
-                    Telefono = txtTelefono.Text
+                    NombreContacto = txtNombre.Text,
+                    ApellidoContacto = txtApellido.Text,
+                    CorreoContacto = txtCorreo.Text,
+                    TelefonoContacto = txtTelefono.Text
                 };
+            try
+            {
+                //await App.cliente.GetTable<Contactos>().InsertAsync(nuevoContacto);
+                //await DisplayAlert("Contacto guardado", "Se ha guardado el contacto con éxito.", "OK");
                 using (var connection = new SQLiteConnection(App.dbRuta))
                 {
                     connection.CreateTable<Contactos>();
                     connection.Insert(nuevoContacto);
-                    if(connection.Table<Contactos>().Table != null)
+                    if (connection.Table<Contactos>().Table != null)
                     {
-                        DisplayAlert("Contacto guardado", "Se ha guardado el contacto con éxito.","OK");
+                        DisplayAlert("Contacto guardado", "Se ha guardado el contacto con éxito.", "OK");
                     }
                 }
             }

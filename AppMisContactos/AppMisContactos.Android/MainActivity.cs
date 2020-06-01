@@ -24,7 +24,7 @@ namespace AppMisContactos.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             
-            CurrentPlatform.Init();
+            //CurrentPlatform.Init();
             string nombreArchivo = "bd_Contactos.sqlite";
             string rutaCarpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);

@@ -7,7 +7,7 @@ namespace AppMisContactos
 {
     public partial class App : Application
     {
-        public static MobileServiceClient cliente = new MobileServiceClient("https://udemy-contactos.azurewebsites.net");
+        //public static MobileServiceClient cliente = new MobileServiceClient("https://udemy-contactos.azurewebsites.net");
         public App()
         {
             InitializeComponent();

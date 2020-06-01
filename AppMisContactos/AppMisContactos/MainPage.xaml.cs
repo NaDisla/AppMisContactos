@@ -39,7 +39,8 @@ namespace AppMisContactos
 
                 listContactos.ItemsSource = contactosLista;
             }
-            
+            /*contactosLista = await App.cliente.GetTable<Contactos>().ToListAsync();
+            listContactos.ItemsSource = contactosLista;*/
         }
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {

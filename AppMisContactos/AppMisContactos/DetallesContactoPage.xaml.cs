@@ -19,9 +19,9 @@ namespace AppMisContactos
             InitializeComponent();
             Contacto = contacto;
 
-            lblNombre.Text = $"{contacto.Nombre + " " + contacto.Apellido}";
-            lblTelefono.Text = contacto.Telefono;
-            lblCorreo.Text = contacto.Correo;
+            lblNombre.Text = $"{contacto.NombreContacto + " " + contacto.ApellidoContacto}";
+            lblTelefono.Text = contacto.TelefonoContacto;
+            lblCorreo.Text = contacto.CorreoContacto;
         }
     }
 }

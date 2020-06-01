@@ -6,36 +6,44 @@ namespace AppMisContactos.Clases
 {
     public class Contactos
     {
-		private string nombre;
+		private int id;
 
-		public string Nombre
+		public int Id
 		{
-			get { return nombre; }
-			set { nombre = value; }
+			get { return id; }
+			set { id = value; }
 		}
 
-		private string apellido;
+		private string nombreContacto;
 
-		public string Apellido
+		public string NombreContacto
 		{
-			get { return apellido; }
-			set { apellido = value; }
+			get { return nombreContacto; }
+			set { nombreContacto = value; }
 		}
 
-		private string correo;
+		private string apellidoContacto;
 
-		public string Correo
+		public string ApellidoContacto
 		{
-			get { return correo; }
-			set { correo = value; }
+			get { return apellidoContacto; }
+			set { apellidoContacto = value; }
 		}
 
-		private string telefono;
+		private string correoContacto;
 
-		public string Telefono
+		public string CorreoContacto
 		{
-			get { return telefono; }
-			set { telefono = value; }
+			get { return correoContacto; }
+			set { correoContacto = value; }
+		}
+
+		private string telefonoContacto;
+
+		public string TelefonoContacto
+		{
+			get { return telefonoContacto; }
+			set { telefonoContacto = value; }
 		}
 
 
