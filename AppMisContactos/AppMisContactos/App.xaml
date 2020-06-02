@@ -6,6 +6,20 @@
              mc:Ignorable="d"
              x:Class="AppMisContactos.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="colorPrincipal">DarkBlue</Color>
+            <Color x:Key="colorLabel">Black</Color>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="PlaceholderColor" Value="CadetBlue" />
+            </Style>
 
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="CadetBlue"/>
+                <Setter Property="WidthRequest" Value="90"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

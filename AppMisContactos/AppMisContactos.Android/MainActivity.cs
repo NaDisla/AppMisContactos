@@ -6,10 +6,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace AppMisContactos.Droid
 {
-    [Activity(Label = "AppMisContactos", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "MyContactsApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -21,7 +23,12 @@ namespace AppMisContactos.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            
+            //CurrentPlatform.Init();
+            string nombreArchivo = "bd_Contactos.sqlite";
+            string rutaCarpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);
+            LoadApplication(new App(rutaCompleta));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

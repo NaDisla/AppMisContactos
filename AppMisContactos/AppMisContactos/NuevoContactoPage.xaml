@@ -5,8 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppMisContactos.NuevoContactoPage">
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20">
+            <Label x:Name="lblHora"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource colorLabel}"/>
             <Entry x:Name="txtNombre"
                    Placeholder="Nombre"/>
             <Entry x:Name="txtApellido"
@@ -17,6 +23,10 @@
             <Entry x:Name="txtTelefono"
                    Placeholder="Teléfono"
                    Keyboard="Telephone"/>
+            <Button x:Name="btnGuardarContacto"
+                    Text="Guardar"
+                    Clicked="btnGuardarContacto_Clicked"
+                    TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

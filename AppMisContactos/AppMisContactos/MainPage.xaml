@@ -6,11 +6,18 @@
              mc:Ignorable="d"
              x:Class="AppMisContactos.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listContactos">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding NombreContacto}"
+                          Detail="{Binding TelefonoContacto}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>
